@@ -83,12 +83,15 @@ address {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
-}
-
-.navigation:hover,
-.navigation:focus {
-  color: #404bbf;
-  text-decoration: none;
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #404bbf;
+    text-decoration: none;
+  }
 }
 
 .contacts {
@@ -98,15 +101,16 @@ address {
 .contacts .cont-link {
   color: #434455;
   text-decoration: none;
-
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-.contacts .cont-link:hover,
-.contacts .cont-link:focus {
-  color: #404bbf;
-  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #404bbf;
+    text-decoration: none;
+  }
 }
 
 .header-menu-list {
@@ -168,12 +172,14 @@ address {
   border-radius: 4px;
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-}
-
-.button:hover,
-:focus {
-  color: #ffffff;
-  background-color: #404bbf;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: #404bbf;
+  }
 }
 
 /* ----------- SECTION TWO (FEATURES)----------- */
@@ -307,6 +313,7 @@ address {
   width: calc((100% - 3 * 24px) / 4);
   border-radius: 50px;
   background-color: #4d5ae5;
+  cursor: pointer;
 }
 
 .team-icon {
@@ -348,7 +355,7 @@ address {
   letter-spacing: 0.02em;
   color: #434455;
 }
-.portfolio-list-container {
+.portfolio-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -359,7 +366,42 @@ address {
 
 .portfolio-list {
   width: calc((100% - 2 * 24px) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    cursor: pointer;
+    .portfolio-list-text {
+      transform: translateY(0);
+    }
+  }
 }
+
+.portfolio-list-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-list-text {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  height: 100%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-info {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
@@ -425,6 +467,7 @@ address {
   width: calc((100% - 3 * 16px) / 4);
   border-radius: 50px;
   background-color: #4d5ae5;
+  cursor: pointer;
 }
 
 .footer-social-text {
