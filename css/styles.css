@@ -87,8 +87,7 @@ address {
   display: block;
   position: relative;
   overflow: hidden;
-  transition-property: color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation::after {
   position: absolute;
@@ -101,8 +100,7 @@ address {
   height: 4px;
   background-color: #404bbf;
   transform: translateY(100%);
-  transition-property: transform;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation:hover,
 .navigation:focus {
@@ -123,8 +121,7 @@ address {
   text-decoration: none;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition-property: color;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts .cont-link:hover,
 .contacts .cont-link:focus {
