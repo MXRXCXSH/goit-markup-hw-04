@@ -94,7 +94,7 @@ address {
   position: absolute;
   content: "";
   display: block;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   border-radius: 2px;
   width: 100%;
@@ -124,8 +124,7 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts .cont-link:hover,
 .contacts .cont-link:focus {
